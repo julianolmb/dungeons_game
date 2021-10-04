@@ -1,0 +1,111 @@
+.containernomargin
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.header
+{
+    background-color: #380000;
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
+.header2
+{
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.title
+{
+    height: 50px;
+    font-size: 26px;
+    font-family: 'MedievalSharp', cursive;
+    
+}
+
+.title2
+{
+    height: 30px;
+    font-size: 12px;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.title3
+{
+    height: 30px;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+    margin: 0px;
+}
+
+.title4
+{
+    height: 50px;
+    font-size: 16x;
+    font-family: 'Oswald', sans-serif;
+}
+
+.quizbody
+{
+    background-color: #632929;
+}
+.quizbox
+{
+    align-items: center;
+    margin: auto;   
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #fffcf0;
+    height: 400px;
+    width: 800px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.quizquestions
+{
+    margin-top: 20px;
+    font-family: 'MedievalSharp', cursive;
+}
+
+.quizanswers
+{
+    font-size: 16px;
+    text-align: center;
+    height: 130px;
+}
+
+#quizquestions
+{
+    line-height: 40px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+#messages
+{
+    font-style: italic;
+}
+
+.quizanswerlines
+{
+    border-bottom: 1px solid black;
+}
+.footer
+{
+    background-color: #380000;
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+}

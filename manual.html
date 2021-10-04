@@ -1,0 +1,102 @@
+<!-- GAME (HELLO COLIN, MAKING TEA, BRB!!)
+
+1.0 User enters the page, show an intro.
+1.1 create a div called gamedescription for the display.
+1.2 create a command to start the game.
+1.3 create a hud.
+1.4 the objetive of the game is obtaining specic Items to finish a quest.
+    1.5 the ending will be triggered by event on starting location when required Items are on Backpack.
+1.6 Player can die when going to some Rooms or Events.
+    1.7 a hint, or a warning will always alert the Player for the danger.
+    1.8 these specific Events and Rooms, can either kill or not the Player based in conditions.
+
+2.0 User will interact with the game by typing commands on a box.
+2.1 define an input box area. 
+2.2 user will submit the command by pressing enter.
+    2.2.1 create a function for pressing enter.
+    2.2.2 check if command is valid. if not, return an error message on div info. 
+    2.2.3 if command is valid, but not applicable, return another error message on div info. 
+2.3 Commands  will generate a result and change the display on the page. 
+    2.3.1 changes will be displayed on div gamedescription.
+    2.3.2 create a div called info for the error displays. 
+    2.3.3 errors must disappear from the display when valid command is taken.  
+    
+3.0 A Player character must be created.
+3.0 this Player will be a class (Character)
+3.1 this Character will have a fixed name property: Jolly Panflip.
+3.2 this Character will have a class (Backpack) with a size property.
+    3.2.1 the Backpack Items will be displayed on a hub.
+3.3 this Character will have a description: "a young adventurer".
+3.4 the Player will be able to check inventory (Backpack).
+3.5 the Player will have the property wealth a starting value = 0.
+    3.5.1 this wealth will be displayed on a hud.
+
+4.0 Backpacks must be created.
+4.1 Backpacks will be created, they will be a class (Backpack).
+4.2 Backpacks will be set for every class (Character).
+4.3 Backpacks will have a property called size.
+    4.3.1 an error message will show when the sum of the sizes of objects stored exceeds Backpack size.
+4.5 Backpacks can store class (Items).
+
+5.0 Rooms must be created.
+5.1 Rooms will be linked to each other and navigated by commands "go + north, south, west, east".
+    5.1.1 in addition, Rooms can be navigated by "explore" and "return" when applicable.
+    5.1.2 Rooms will have name and description properties shown on gamedescription div as user navigates.
+    5.1.3 the description of a Room can change based in condition: having a specific Item on Backpack.
+5.2 a starting Room will be created.
+5.1 Rooms can have Characters inside.
+5.2 some Rooms can only be visited once.
+
+6.0 Non playable characters must be created
+6.1 Characters will have a name property.
+6.2 character will have a description property.
+6.3 Characters will have a class (Backpack) with a size property.
+6.4 Characters will have a property called wealth, with a set starting value.
+6.5 the Player will be able to interact with Characters via commands.
+6.6 command talk will generate a dialog.
+    6.6.1 dialog will be displayed on the gamedescription div.
+    6.6.2 dialogs will be different if specific "Items" are on Backpack.
+    6.6.3 command pickup will remove Item from Character Backpack and add to the Player Backpack.
+    6.6.4 a confirmation message with the Item(name) will be displayed on the gamedescription div.
+    6.6.5 a different dialog will show after the Character has picked an Item.
+6.7 Command buy, will remove Item(name) from NPC Backpack and add to Player Backpack.
+    6.7.1 will also remove Item(value) from Player wealth and add to Character(wealth).
+    6.7.2 will also show a confirmation message with the received Item(name) and the Item(value) spent.
+    6.7.3 conditions: works if Item(value) =< Player wealth && sum of Item(size) on Player Backpack is < Player Backpack(size) && NPC Backpack contains Item(name).
+    6.7.4 if Item(value) > Player wealth: show a "not enough gold" message on the info div.
+    6.7.5 if sum of Item(size) on Player Backpack is > Player Backpack(size): show a "you can't carry anymore" message on the info div.
+    6.7.6 if NPC Backpack does not contain Item(name): show a "sorry I don't have that item." message on the info div.
+6.8 Command sell, if Item(value) =< Character(wealth) && Character accepted items contains Item(name), will remove Item(name) from Player Backpack.
+    6.8.1 will also remove Item(value) from Character(wealth) and add to Player wealth.
+    6.8.2 will also show a confirmation message with the sold Item(name) and the Item(value) earned.
+    6.8.3 if Item(value) > Character(wealth): show a "sorry I can't afford that now" on the info div.
+    6.8.4 Items won't be stored on the Character Backpack.
+    6.8.5 accepted items will be set for each individual Character on the command sell.
+    6.8.6 if accepted items doesn't contain Item(name): show a "sorry I don't need that." message on the info div.
+
+7.0 a special Character extension for Containers will be created.
+7.1 Containers will have a Backpack with items.
+7.2 Containers will have the interactions "investigate" and "pickup."
+    7.2.1 a command for "investigate" must be created.
+    7.2.2 command "investigate" will work exactly as "talk".
+7.3 a Character extension for Enemies will be created.
+7.4 a Player can use the command "kill" to kill an Enemy.
+    7.4.1 a command for "kill" must be created.
+    7.4.2 command "kill" will work exactly as "talk".
+7.5 Items can be picked up from enemies once "killed".
+7.6 when "killed", Enemies will be removed.
+     
+8.0 Items must be created.
+8.1 these Items will have a name.
+8.2 these Items will have a description.
+8.3 these Items will have a value.
+8.4 these Items will have a size.
+8.5 Characters with be able to carry items on Backpacks.
+8.6 Items can be bought, sold and picked.
+
+Events
+
+Important Characters/Quest Givers
+
+
+
